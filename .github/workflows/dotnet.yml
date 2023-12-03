@@ -31,4 +31,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --configuration Release
     - name: Run benchmark
-      run: dotnet .\AsyncAwaitCosts.ConsoleAppBenchmark\bin\Release\netcoreapp2.2\AsyncAwaitCosts.ConsoleAppBenchmark.dll
+      run: dotnet ./AsyncAwaitCosts.ConsoleAppBenchmark/bin/Release/netcoreapp2.2/AsyncAwaitCosts.ConsoleAppBenchmark.dll

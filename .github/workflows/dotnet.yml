@@ -19,13 +19,16 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: | 
+        dotnet-version: |
+          2.2.x
           3.1.x
           5.0.x
           6.0.x
+          7.0.x
+          8.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build --no-restore --configuration Release
+    - name: Run benchmark
+      run: dotnet .\AsyncAwaitCosts.ConsoleAppBenchmark\bin\Release\netcoreapp2.2\AsyncAwaitCosts.ConsoleAppBenchmark.dll

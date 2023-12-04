@@ -39,5 +39,7 @@ jobs:
     - name: Run benchmark
       run: dotnet ./AsyncAwaitCosts.ConsoleAppBenchmark/bin/Release/netcoreapp2.2/AsyncAwaitCosts.ConsoleAppBenchmark.dll
     - name: Copy artifacts to wiki
-      uses: Andrew-Chen-Wang/github-wiki-action@v4
       run: cp "./AsyncAwaitCosts.ConsoleAppBenchmark/bin/Release/netcoreapp2.2/BenchmarkDotNet.Artifacts/results/*.md" "./wiki/"
+    - name: Push wiki
+      uses: Andrew-Chen-Wang/github-wiki-action@v4
+      

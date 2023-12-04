@@ -16,12 +16,12 @@ namespace AsyncAwaitCosts.ConsoleAppBenchmark
         }
     }
 
-    [SimpleJob(RuntimeMoniker.NetCoreApp22)]
-    [SimpleJob(RuntimeMoniker.NetCoreApp31)]
-    [SimpleJob(RuntimeMoniker.Net50)]
-    [SimpleJob(RuntimeMoniker.Net60)]
-    [SimpleJob(RuntimeMoniker.Net70)]
-    [SimpleJob(RuntimeMoniker.Net80)]
+    [ShortRunJob(RuntimeMoniker.NetCoreApp22)]
+    [ShortRunJob(RuntimeMoniker.NetCoreApp31)]
+    [ShortRunJob(RuntimeMoniker.Net50)]
+    [ShortRunJob(RuntimeMoniker.Net60)]
+    [ShortRunJob(RuntimeMoniker.Net70)]
+    [ShortRunJob(RuntimeMoniker.Net80)]
     [MarkdownExporter]
     [MemoryDiagnoser]
     public class AsyncAwaitCosts

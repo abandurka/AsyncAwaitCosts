@@ -9,4 +9,10 @@
       <PackageReference Include="BenchmarkDotNet" Version="0.13.10" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="wiki\home.md">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

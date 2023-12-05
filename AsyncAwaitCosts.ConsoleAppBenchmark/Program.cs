@@ -12,16 +12,21 @@ namespace AsyncAwaitCosts.ConsoleAppBenchmark
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<BenchmarkJob>();
+            var summary = BenchmarkRunner.Run<AsyncAwaitCosts>();
         }
     }
 
-    [SimpleJob(RuntimeMoniker.NetCoreApp31)]
-    [RPlotExporter, MarkdownExporter]
+    [ShortRunJob(RuntimeMoniker.NetCoreApp22)]
+    [ShortRunJob(RuntimeMoniker.NetCoreApp31)]
+    [ShortRunJob(RuntimeMoniker.Net50)]
+    [ShortRunJob(RuntimeMoniker.Net60)]
+    [ShortRunJob(RuntimeMoniker.Net70)]
+    [ShortRunJob(RuntimeMoniker.Net80)]
+    [MarkdownExporter]
     [MemoryDiagnoser]
-    public class BenchmarkJob
+    public class AsyncAwaitCosts
     {
-        [Params(20)]
+        [Params(20, 200)]
         public int N;
         
         private readonly double salt = new Random().NextDouble(); 

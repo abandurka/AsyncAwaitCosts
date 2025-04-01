@@ -5,7 +5,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{C7DE856D-19A8-4076-8578-5877D7572EF9}"
 ProjectSection(SolutionItems) = preProject
 	README.md = README.md
+	.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wiki", "wiki", "{9B979DBD-08FD-42A9-9713-CC18D23A6AB3}"
+	ProjectSection(SolutionItems) = preProject
+		wiki\home.md = wiki\home.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,5 +23,8 @@ Global
 		{CEAB01E8-EB73-42EF-8EA5-7513395EEE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEAB01E8-EB73-42EF-8EA5-7513395EEE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEAB01E8-EB73-42EF-8EA5-7513395EEE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B979DBD-08FD-42A9-9713-CC18D23A6AB3} = {C7DE856D-19A8-4076-8578-5877D7572EF9}
 	EndGlobalSection
 EndGlobal
